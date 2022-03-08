@@ -38,61 +38,6 @@ public class @ControlMaster : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""87d2592d-67b8-4c08-9a01-3f4109049c08"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""6350e781-2872-4f6c-a5e7-302ff8829b15"",
-                    ""path"": ""<XInputController>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""3a8496ed-5fe5-4128-85b2-399353108419"",
-                    ""path"": ""<XInputController>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""9966e1ac-3d86-4a8e-9afd-0d2ccbceeedc"",
-                    ""path"": ""<XInputController>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""95dd2a88-1231-42ce-8928-7ff533aa3bc1"",
-                    ""path"": ""<XInputController>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
                     ""id"": ""04b0ae5a-35d4-4845-bafa-e5785ead059c"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
@@ -148,11 +93,33 @@ public class @ControlMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""d4f757fe-1712-4c64-a51c-0c5b7379e81e"",
+                    ""path"": ""<XInputController>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""3667fd0e-a6ef-4096-9a31-904b280d21b4"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""cam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8de1e009-3e8d-404f-8a57-637ad2d4716d"",
+                    ""path"": ""<XInputController>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""xbox"",
                     ""action"": ""cam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
