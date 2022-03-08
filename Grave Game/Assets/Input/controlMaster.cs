@@ -19,124 +19,141 @@ public class @ControlMaster : IInputActionCollection, IDisposable
             ""id"": ""5a5d3270-1d7d-409b-ba06-d16fa21e5dca"",
             ""actions"": [
                 {
-                    ""name"": ""moveup"",
-                    ""type"": ""Button"",
+                    ""name"": ""move"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""9fc1ae0d-f0c1-4595-89de-99b7821e3a7a"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""movedown"",
-                    ""type"": ""Button"",
-                    ""id"": ""931bd6c3-f946-41da-90f3-a96fbf422a66"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""moveleft"",
-                    ""type"": ""Button"",
-                    ""id"": ""742db507-ea81-48f9-9aeb-60b84862b9f1"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""moveright"",
-                    ""type"": ""Button"",
-                    ""id"": ""8b9166c8-67ae-4801-bc6b-b3976e44cddd"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""cam"",
+                    ""type"": ""Value"",
+                    ""id"": ""e3fa7ae4-3a02-4340-92b1-04d871e153c4"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""5743f2a9-59fa-457e-a1e1-1fcd32782f61"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""name"": ""2D Vector"",
+                    ""id"": ""87d2592d-67b8-4c08-9a01-3f4109049c08"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""moveup"",
-                    ""isComposite"": false,
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""41ade66d-d530-4ed3-b741-d50c87494167"",
+                    ""name"": ""up"",
+                    ""id"": ""6350e781-2872-4f6c-a5e7-302ff8829b15"",
+                    ""path"": ""<XInputController>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""xbox"",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""3a8496ed-5fe5-4128-85b2-399353108419"",
+                    ""path"": ""<XInputController>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""xbox"",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""9966e1ac-3d86-4a8e-9afd-0d2ccbceeedc"",
+                    ""path"": ""<XInputController>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""xbox"",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""95dd2a88-1231-42ce-8928-7ff533aa3bc1"",
+                    ""path"": ""<XInputController>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""xbox"",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""04b0ae5a-35d4-4845-bafa-e5785ead059c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4e0a1f3c-bd83-4eda-afc4-09be0aa5ed80"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
-                    ""action"": ""moveup"",
+                    ""action"": ""move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""eb048c26-6570-4441-a9f9-551823b298b8"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""movedown"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fed03792-6d0f-4279-92cc-c202baa2b07d"",
+                    ""name"": ""down"",
+                    ""id"": ""1c15dc73-5d4a-47a8-9674-e39e4f731f10"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
-                    ""action"": ""movedown"",
+                    ""action"": ""move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""2567c226-5fca-4e32-9b49-0f1888a6cf2d"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""moveleft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0535059a-f47f-4789-9ec6-a15c4afe4e0c"",
+                    ""name"": ""left"",
+                    ""id"": ""d9ca1c55-a223-40bb-8f51-06a971acaffd"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
-                    ""action"": ""moveleft"",
+                    ""action"": ""move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""5b9d421b-22e3-4cb3-a99c-45dc37153947"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""xbox"",
-                    ""action"": ""moveright"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""eff1ccbf-7988-4523-a357-56231e858759"",
+                    ""name"": ""right"",
+                    ""id"": ""5050d0be-88e4-43c8-a202-960c8463e631"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
-                    ""action"": ""moveright"",
+                    ""action"": ""move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3667fd0e-a6ef-4096-9a31-904b280d21b4"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""cam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -175,10 +192,8 @@ public class @ControlMaster : IInputActionCollection, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_moveup = m_Player.FindAction("moveup", throwIfNotFound: true);
-        m_Player_movedown = m_Player.FindAction("movedown", throwIfNotFound: true);
-        m_Player_moveleft = m_Player.FindAction("moveleft", throwIfNotFound: true);
-        m_Player_moveright = m_Player.FindAction("moveright", throwIfNotFound: true);
+        m_Player_move = m_Player.FindAction("move", throwIfNotFound: true);
+        m_Player_cam = m_Player.FindAction("cam", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -228,18 +243,14 @@ public class @ControlMaster : IInputActionCollection, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_moveup;
-    private readonly InputAction m_Player_movedown;
-    private readonly InputAction m_Player_moveleft;
-    private readonly InputAction m_Player_moveright;
+    private readonly InputAction m_Player_move;
+    private readonly InputAction m_Player_cam;
     public struct PlayerActions
     {
         private @ControlMaster m_Wrapper;
         public PlayerActions(@ControlMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @moveup => m_Wrapper.m_Player_moveup;
-        public InputAction @movedown => m_Wrapper.m_Player_movedown;
-        public InputAction @moveleft => m_Wrapper.m_Player_moveleft;
-        public InputAction @moveright => m_Wrapper.m_Player_moveright;
+        public InputAction @move => m_Wrapper.m_Player_move;
+        public InputAction @cam => m_Wrapper.m_Player_cam;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -249,34 +260,22 @@ public class @ControlMaster : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @moveup.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveup;
-                @moveup.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveup;
-                @moveup.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveup;
-                @movedown.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovedown;
-                @movedown.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovedown;
-                @movedown.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovedown;
-                @moveleft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveleft;
-                @moveleft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveleft;
-                @moveleft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveleft;
-                @moveright.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveright;
-                @moveright.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveright;
-                @moveright.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMoveright;
+                @move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @cam.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
+                @cam.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
+                @cam.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @moveup.started += instance.OnMoveup;
-                @moveup.performed += instance.OnMoveup;
-                @moveup.canceled += instance.OnMoveup;
-                @movedown.started += instance.OnMovedown;
-                @movedown.performed += instance.OnMovedown;
-                @movedown.canceled += instance.OnMovedown;
-                @moveleft.started += instance.OnMoveleft;
-                @moveleft.performed += instance.OnMoveleft;
-                @moveleft.canceled += instance.OnMoveleft;
-                @moveright.started += instance.OnMoveright;
-                @moveright.performed += instance.OnMoveright;
-                @moveright.canceled += instance.OnMoveright;
+                @move.started += instance.OnMove;
+                @move.performed += instance.OnMove;
+                @move.canceled += instance.OnMove;
+                @cam.started += instance.OnCam;
+                @cam.performed += instance.OnCam;
+                @cam.canceled += instance.OnCam;
             }
         }
     }
@@ -301,9 +300,7 @@ public class @ControlMaster : IInputActionCollection, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnMoveup(InputAction.CallbackContext context);
-        void OnMovedown(InputAction.CallbackContext context);
-        void OnMoveleft(InputAction.CallbackContext context);
-        void OnMoveright(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
+        void OnCam(InputAction.CallbackContext context);
     }
 }
