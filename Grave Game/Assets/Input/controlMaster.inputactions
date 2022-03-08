@@ -1,0 +1,162 @@
+{
+    "name": "New Controls 1",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "5a5d3270-1d7d-409b-ba06-d16fa21e5dca",
+            "actions": [
+                {
+                    "name": "moveup",
+                    "type": "Button",
+                    "id": "9fc1ae0d-f0c1-4595-89de-99b7821e3a7a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "movedown",
+                    "type": "Button",
+                    "id": "931bd6c3-f946-41da-90f3-a96fbf422a66",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveleft",
+                    "type": "Button",
+                    "id": "742db507-ea81-48f9-9aeb-60b84862b9f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "moveright",
+                    "type": "Button",
+                    "id": "8b9166c8-67ae-4801-bc6b-b3976e44cddd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5743f2a9-59fa-457e-a1e1-1fcd32782f61",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": "moveup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41ade66d-d530-4ed3-b741-d50c87494167",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "moveup",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb048c26-6570-4441-a9f9-551823b298b8",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": "movedown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fed03792-6d0f-4279-92cc-c202baa2b07d",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "movedown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2567c226-5fca-4e32-9b49-0f1888a6cf2d",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": "moveleft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0535059a-f47f-4789-9ec6-a15c4afe4e0c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "moveleft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b9d421b-22e3-4cb3-a99c-45dc37153947",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": "moveright",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eff1ccbf-7988-4523-a357-56231e858759",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "moveright",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "xbox",
+            "bindingGroup": "xbox",
+            "devices": [
+                {
+                    "devicePath": "<XInputController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard + mouse",
+            "bindingGroup": "Keyboard + mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
