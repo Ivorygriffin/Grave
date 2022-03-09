@@ -33,6 +33,22 @@ public class @ControlMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""click"",
+                    ""type"": ""Button"",
+                    ""id"": ""80e19870-8d9f-4938-8bc4-c82117b12e5a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""mouseposition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f37814a7-951e-4fff-b974-58fdda175c83"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -123,6 +139,28 @@ public class @ControlMaster : IInputActionCollection, IDisposable
                     ""action"": ""cam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32d62482-4dca-4833-bc91-5e185306055f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f9b8112-1fa4-4a37-84db-9405b810add4"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""mouseposition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -161,6 +199,8 @@ public class @ControlMaster : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_move = m_Player.FindAction("move", throwIfNotFound: true);
         m_Player_cam = m_Player.FindAction("cam", throwIfNotFound: true);
+        m_Player_click = m_Player.FindAction("click", throwIfNotFound: true);
+        m_Player_mouseposition = m_Player.FindAction("mouseposition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -212,12 +252,16 @@ public class @ControlMaster : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_move;
     private readonly InputAction m_Player_cam;
+    private readonly InputAction m_Player_click;
+    private readonly InputAction m_Player_mouseposition;
     public struct PlayerActions
     {
         private @ControlMaster m_Wrapper;
         public PlayerActions(@ControlMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_Player_move;
         public InputAction @cam => m_Wrapper.m_Player_cam;
+        public InputAction @click => m_Wrapper.m_Player_click;
+        public InputAction @mouseposition => m_Wrapper.m_Player_mouseposition;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -233,6 +277,12 @@ public class @ControlMaster : IInputActionCollection, IDisposable
                 @cam.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
                 @cam.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
                 @cam.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCam;
+                @click.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnClick;
+                @click.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnClick;
+                @click.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnClick;
+                @mouseposition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseposition;
+                @mouseposition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseposition;
+                @mouseposition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMouseposition;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -243,6 +293,12 @@ public class @ControlMaster : IInputActionCollection, IDisposable
                 @cam.started += instance.OnCam;
                 @cam.performed += instance.OnCam;
                 @cam.canceled += instance.OnCam;
+                @click.started += instance.OnClick;
+                @click.performed += instance.OnClick;
+                @click.canceled += instance.OnClick;
+                @mouseposition.started += instance.OnMouseposition;
+                @mouseposition.performed += instance.OnMouseposition;
+                @mouseposition.canceled += instance.OnMouseposition;
             }
         }
     }
@@ -269,5 +325,7 @@ public class @ControlMaster : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnCam(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
+        void OnMouseposition(InputAction.CallbackContext context);
     }
 }
